@@ -1,4 +1,4 @@
-from flask import Blueprint 
+from flask import Blueprint, render_template 
 
 
 
@@ -11,7 +11,9 @@ api = Blueprint("api", __name__)
 
 @api.route("/", methods=["GET"])
 def get_home():
-    return "<h1>Welcome to our homepage</h1>"
+    return render_template("home.html")
+
+
 
 
 
